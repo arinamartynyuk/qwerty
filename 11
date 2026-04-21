@@ -1,0 +1,301 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/arinamartynyuk/qwerty/blob/main/11\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np                    # Підключаємо бібліотеку NumPy та скорочуємо назву до np\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "omEA3dIZhicy"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Завдання 1\n",
+        "arr1 = np.arange(1, 21)              # Створюємо масив чисел від 1 до 20\n",
+        "print(arr1)                          # Виводимо масив на екран"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xqZnf10YiLmW",
+        "outputId": "cfeba0d7-c040-4d70-9855-cb803baeb7b5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Завдання 2\n",
+        "arr2 = np.ones((4, 4))               # Створюємо матрицю 4x4, заповнену одиницями\n",
+        "print(arr2)                          # Виводимо матрицю"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ny5-vPfpiNAY",
+        "outputId": "61d415c8-94d6-4b0f-b1f7-b18e37becdf0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[1. 1. 1. 1.]\n",
+            " [1. 1. 1. 1.]\n",
+            " [1. 1. 1. 1.]\n",
+            " [1. 1. 1. 1.]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Завдання 3\n",
+        "arr3 = np.random.uniform(-1, 1, (5, 5))   # Створюємо матрицю 5x5 з випадкових дробових чисел від -1 до 1\n",
+        "print(arr3)                               # Виводимо матрицю"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q-7bTMnvjiml",
+        "outputId": "b824fbe9-f04f-49c8-a8f8-d9c62610a4e4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[-0.18303438  0.44254966 -0.34291154 -0.63518257 -0.05840134]\n",
+            " [-0.49712175 -0.58401708 -0.6110485   0.5042479  -0.91766451]\n",
+            " [ 0.05964923  0.51845379 -0.71615593 -0.38589687 -0.40371845]\n",
+            " [-0.04117478  0.45099666  0.86070655 -0.71353238  0.85635033]\n",
+            " [-0.27511077  0.14688031  0.0046105  -0.74492278 -0.27301042]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Завдання 4\n",
+        "arr4 = np.random.rand(3, 3)         # Створюємо матрицю 3x3 з випадкових чисел від 0 до 1\n",
+        "print(arr4)                         # Виводимо матрицю"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OS0AHjTwjksY",
+        "outputId": "3470609e-9212-442e-b13f-de49c522901d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[0.35364437 0.14979299 0.87671417]\n",
+            " [0.79854555 0.0959273  0.74967277]\n",
+            " [0.71935218 0.0055432  0.95939646]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Завдання 5\n",
+        "a = np.random.randint(1, 21, 6)     # Перший масив із 6 випадкових цілих чисел від 1 до 20\n",
+        "b = np.random.randint(1, 21, 6)     # Другий масив із 6 випадкових цілих чисел від 1 до 20\n",
+        "\n",
+        "print(a)                            # Виводимо перший масив\n",
+        "print(b)                            # Виводимо другий масив\n",
+        "\n",
+        "print(a + b)                        # Додаємо масиви поелементно\n",
+        "print(a - b)                        # Віднімаємо масиви поелементно\n",
+        "print(a * b)                        # Множимо масиви поелементно"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tzaLmF7djnRL",
+        "outputId": "58775b6d-2577-4f22-e382-0a055ca0338a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[12  6 16 10  1  9]\n",
+            "[17 11 17  9  6 10]\n",
+            "[29 17 33 19  7 19]\n",
+            "[-5 -5 -1  1 -5 -1]\n",
+            "[204  66 272  90   6  90]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Завдання 6\n",
+        "m1 = np.random.randint(1, 6, (3, 2))   # Створюємо матрицю 3x2 з числами від 1 до 5\n",
+        "m2 = np.random.randint(1, 6, (2, 4))   # Створюємо матрицю 2x4 з числами від 1 до 5\n",
+        "\n",
+        "print(m1)                              # Виводимо першу матрицю\n",
+        "print(m2)                              # Виводимо другу матрицю\n",
+        "\n",
+        "print(np.dot(m1, m2))                  # Множимо матриці між собою"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fqFklqrBjouW",
+        "outputId": "25d7b377-8f62-4d64-d636-63f57d242429"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[2 4]\n",
+            " [4 2]\n",
+            " [4 5]]\n",
+            "[[1 3 2 4]\n",
+            " [5 1 5 2]]\n",
+            "[[22 10 24 16]\n",
+            " [14 14 18 20]\n",
+            " [29 17 33 26]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Завдання 7\n",
+        "m3 = np.random.rand(3, 3)          # Створюємо матрицю 3x3 з випадкових чисел від 0 до 1\n",
+        "\n",
+        "print(m3)                          # Виводимо початкову матрицю\n",
+        "print(m3.T)                        # Транспонуємо матрицю (міняємо рядки і стовпці місцями)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N9lK-jITjrpm",
+        "outputId": "5e0d1acd-8b68-44d1-b3e7-41d58818de51"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[0.14857529 0.30137378 0.0889079 ]\n",
+            " [0.21173763 0.85588961 0.04590798]\n",
+            " [0.57685643 0.96728083 0.59058638]]\n",
+            "[[0.14857529 0.21173763 0.57685643]\n",
+            " [0.30137378 0.85588961 0.96728083]\n",
+            " [0.0889079  0.04590798 0.59058638]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Завдання 8\n",
+        "m4 = np.random.randint(1, 11, (3, 3))   # Перша матриця 3x3 з числами від 1 до 10\n",
+        "m5 = np.random.randint(1, 11, (3, 3))   # Друга матриця 3x3 з числами від 1 до 10\n",
+        "\n",
+        "print(m4 - m5)                          # Знаходимо різницю двох матриць"
+      ],
+      "metadata": {
+        "id": "G7T6qXIGjtiQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Завдання 9\n",
+        "m6 = np.random.randint(-5, 6, (3, 3))   # Перша матриця 3x3 з числами від -5 до 5\n",
+        "m7 = np.random.randint(-5, 6, (3, 3))   # Друга матриця 3x3 з числами від -5 до 5\n",
+        "\n",
+        "print(np.dot(m6, m7))                   # Знаходимо добуток матриць"
+      ],
+      "metadata": {
+        "id": "GIK3xP2Wj0F-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Завдання 10\n",
+        "m8 = np.random.uniform(-1, 1, (3, 3))   # Створюємо матрицю 3x3 з числами від -1 до 1\n",
+        "\n",
+        "sums = m8.sum(axis=1)                   # Знаходимо суму елементів кожного рядка\n",
+        "\n",
+        "result = sums.reshape(3, 1)            # Перетворюємо масив сум у вектор-стовпчик\n",
+        "\n",
+        "print(m8)                               # Виводимо початкову матрицю\n",
+        "print(result)                           # Виводимо вектор-стовпчик сум"
+      ],
+      "metadata": {
+        "id": "Om5mAYs8j2dD"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
